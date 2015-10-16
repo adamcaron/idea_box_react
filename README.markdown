@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/adamcaron/idea_box_react.png?label=ready&title=Ready)](https://waffle.io/adamcaron/idea_box_react)
 # Idea Box -- React
 
 A simple application for recording and archiving ideas. This app is a project for the Turing School of Software and Design. The original project specifications can be found [here](https://github.com/turingschool/curriculum/blob/master/source/projects/revenge_of_idea_box.markdown).
