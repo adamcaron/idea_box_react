@@ -1,8 +1,11 @@
 var Dashboard = React.createClass({
+  getInitialState: function () {
+    return { ideas: this.props.ideas }
+  },
   render: function () {
     return (
       <div className='flex-container'>
-        <Ideas />
+        <Ideas ideas={this.state.ideas} />
         <IdeaCreation />
       </div>
     );
@@ -14,7 +17,7 @@ var Ideas = React.createClass({
     return (
       <section id='ideas'>
         <Search />
-        <IdeaIndex />
+        <IdeaIndex ideas={this.props.ideas} />
       </section>
     );
   }
@@ -32,8 +35,25 @@ var Search = React.createClass({
 
 var IdeaIndex = React.createClass({
   render: function () {
+        debugger;
+    var ideas = this.props.ideas.map(function(idea, index) {
+      return (
+        <article className='idea' data-idea-id={ idea.id }>
+          <h2 className='title'>{ idea.title }</h2>
+          <span className='date'>{ idea.date }</span>
+          <p className='body'>{ idea.body }</p>
+          <a className='edit-idea' href='/ideas/edit'>Edit</a>
+          <button name='button' type='submit' className='delete-idea'>Delete</button>
+          <span className='quality'>{ idea.quality }</span>
+          <button name='button' type='submit' className='quality-up'>+</button>
+          <button name='button' type='submit' className='quality-down'>-</button>
+        </article>
+      );
+    });
     return (
-      <article></article>
+      <div>
+        { ideas }
+      </div>
     );
   }
 });
