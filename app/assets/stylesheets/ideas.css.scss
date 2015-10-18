@@ -1,0 +1,189 @@
+// Edit Idea
+.edit_idea input[type="submit"] {
+  float: right;
+}
+
+.edit_idea textarea {
+  min-height: 100px;
+}
+
+.edit_idea input[type="text"], .edit_idea textarea {
+  border: 1px solid lightgray;
+  font-size: 1em;
+  padding: 10px;
+  width: 95%;
+}
+
+.edit_idea h3 {
+  margin-top: 10px;
+}
+
+.edit_idea h3,
+.edit_idea input[type="text"],
+.edit_idea textarea,
+.edit_idea input[type="submit"] {
+  margin-bottom: 10px;
+}
+
+form.edit_idea::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+form.edit_idea {
+  -moz-box-shadow:    0px 0px 5px 2px #ccc;
+  -webkit-box-shadow: 0px 0px 5px 2px #ccc;
+  box-shadow:         0px 0px 5px 2px #ccc;
+
+  padding: 10px 20px;
+  max-width: 500px;
+  top: 100px;
+  margin: 0 auto;
+  background-color: #fdfdfd;
+}
+
+h2#edit-title {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+// Delete Idea
+.notification {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+// Create Idea
+#save-idea {
+  padding: 20px;
+  width: 100px;
+  float: right;
+}
+
+#idea-creation-area form textarea {
+  min-height: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 95%;
+}
+
+#idea-creation-area form input[type="text"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 95%;
+}
+
+#idea-creation-area {
+  margin: 5px 0 0 5px;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 10px;
+  background-color: white;
+  flex: 1;
+}
+
+// Search Ideas
+#search-input {
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  font-size: 1em;
+  padding: 15px 5px;
+  -webkit-flex: auto;
+  flex: auto;
+}
+
+#search-area {
+  display:                -webkit-flex;
+  display:                flex;
+  -webkit-flex-direction: row;
+  flex-direction:         row;
+}
+
+// Ideas
+.delete-idea {
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.edit-idea, .delete-idea {
+  padding: 6px 12px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  color: black;
+}
+
+.edit-idea:hover, .delete-idea:hover {
+  border: 1px solid #dddddd;
+}
+
+.edit-idea:active, .delete-idea:active {
+  color: tomato;
+}
+
+.edit-idea:visited, .delete-idea:visited {
+  color: black;
+}
+
+.quality-up, .quality-down {
+  padding: 6px 12px;
+  float: right;
+}
+
+.quality {
+  padding: 6px 12px;
+  text-align: right;
+  float: right;
+  text-transform: capitalize;
+}
+
+.body {
+  width: 65%;
+  clear: both;
+}
+
+.date {
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  float: right;
+}
+
+.title {
+  width: 65%;
+  float: left;
+}
+
+.idea:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.idea {
+  background-color: white;
+  padding: 10px;
+  border-top: 1px solid rgba(0,0,0,.2);
+  border-right: 1px solid rgba(0,0,0,.2);
+  border-left: 1px solid rgba(0,0,0,.2);
+}
+
+#ideas {
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  min-height: 100%;
+  flex: 2;
+  margin-bottom: 80px;
+}
+
+#idea-creation-area {
+  margin: 5px 0 0 5px;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 10px;
+  background-color: white;
+  height: 300px;
+  flex: 1;
+}
