@@ -19,12 +19,4 @@ class Idea < ActiveRecord::Base
   #   end
   # end
 
-  # def date
-  #   date = self.created_at.localtime
-  #   date.strftime("%b %d %Y") + " at " + date.strftime("%l:%M%P")
-  # end
-
-  # def truncated_body
-  #   self.body.truncate(100, separator: /\s/)
-  # end
 end

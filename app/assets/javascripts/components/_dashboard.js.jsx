@@ -50,11 +50,13 @@ var IdeaIndex = React.createClass({
     var ideas = this.props.ideas.map(function(idea, index) {
       var dateOptions = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
       var date = new Date(idea.created_at).toLocaleString('en-US', dateOptions);
+      var truncatedBody = truncate(idea.body, 100);
+
       return (
         <article className='idea' key={ idea.id }>
           <h2 className='title'>{ idea.title }</h2>
           <span className='date'>{ date }</span>
-          <p className='body'>{ idea.body }</p>
+          <p className='body'>{ truncatedBody }</p>
           <a className='edit-idea' href='/ideas/edit'>Edit</a>
           <button name='button' type='submit' className='delete-idea'>Delete</button>
           <span className='quality'>{ idea.quality }</span>
@@ -63,11 +65,19 @@ var IdeaIndex = React.createClass({
         </article>
       );
     });
+
     return (
       <div>
         { ideas }
       </div>
     );
+
+    function truncate(text, maxLength) {
+      if (text.length > maxLength) {
+        text = text.substr(0,maxLength-3).replace(/\w+$/, '') + "...";
+      } // truncate and ensure it doesn't cut a word in the middle
+      return text;
+    }
   }
 });
 
